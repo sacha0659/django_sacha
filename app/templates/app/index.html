@@ -28,16 +28,23 @@
     </thead>
     <tbody>
         {% for member in members %}
-        <tr>
-            <td>{{ member.id }}</td>
-            <td><a href="{% url 'app:detail' id=member.id %}">{{ member.name }}</a></td>
-            <td>{{ member.name }}</a></td>
-            <td>{{ member.email }}</td>
-            <td>{{ member.age }}</td>
-            <td>
-                <a href="{% url 'app:edit' id=member.id %}" class="btn btn-primary btn-sm">Éditer</a>
-                <a href="{% url 'app:delete' id=member.id %}" class="btn btn-primary btn-sm" id="btn_del">Effacer</a>
-            </td>
+        <section  class="section-collection">
+         
+            <div class="collection">
+                <picture>
+                    <img src="https://cdn2.chrzz.com/contents/assets/web_image-phmlg866esu4h1eekbqtaq3khbv0-1x-1.jpg" alt="">
+                </picture>
+                <div>
+                    <h3>
+                        {{ member.name }}
+                    </h3>
+                    <a href="{% url 'app:detail' id=member.id %}">{{ member.name }}</a>
+                </div>
+            </div>
+       
+        
+  
+        
         </tr>
         {% endfor %}
     </tbody>
