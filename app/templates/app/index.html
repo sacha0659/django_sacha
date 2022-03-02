@@ -22,6 +22,7 @@ Programmé pour afficher une liste
         {% for member in members %}
         <tr>
             <td>{{ member.id }}</td>
+            <td><a href="{% url 'app:detail' id=member.id %}">{{ member.name }}</a></td>
             <td>{{ member.name }}</a></td>
             <td>{{ member.email }}</td>
             <td>{{ member.age }}</td>
