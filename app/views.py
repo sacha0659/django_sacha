@@ -51,8 +51,15 @@ def edit(request, id=None):
 	#Afficher un nouvel écran / modifier l'écran
 	return render(request, 'app/edit.html', dict(form=form, id=id))
 #Effacer
+#Détails (bonus)
+#Détails (bonus)
+def detail(request, id=None):
+    member = get_object_or_404(Member, pk=id)
+    return render(request, 'app/detail.html', {'member':member})
+
 def delete(request, id):
 	# return HttpResponse("Effacer")
 	member = get_object_or_404(Member, pk=id)
 	member.delete()
 	return redirect('app:index')
+

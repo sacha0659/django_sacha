@@ -6,8 +6,9 @@ app_name = 'app'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('/add/', views.edit, name='add'),
-    path('/edit/(?P<id>\d+)/', views.edit, name='edit'),
-    path('/delete/(?P<id>\d+)/', views.delete, name='delete'),
-    # path(r'^members/detail/(?P<id>\d+)/$', views.detail, name='detail'),
+    path('add/', views.edit, name='add'),
+    path('edit/<int:id>/', views.edit, name='edit'),
+    path('detail/<int:id>/', views.detail, name='detail'),
+    path('delete/<int:id>/', views.delete, name='delete'),
+    
 ]
