@@ -1,9 +1,16 @@
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-{% block title %}
-Programmé pour afficher une liste
-{% endblock title %}
 
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet"  href="css/style.css>
 {% block content %}
+
+<div class="Mynavbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+      </div>
+    </nav>
+  </div>
+
 <h3>Affichage de la liste</h3>
 
 <a href="{% url 'app:add' %}" class="btn btn-primary btn-sm">ajouter à</a>
