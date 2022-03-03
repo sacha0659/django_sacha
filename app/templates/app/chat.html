@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 {% block content %}
-<div class="chatter"> <a href="{% url 'app:chat' %}"><i class="fas fa-comment"></i> </a></div>
+<div class="chatter"> <i class="fas fa-comment"></i> </div>
 <div class="navup">
     <p>Le 6 mars c'est la fête des mamies ! Pensez à une petite carte cadeau pour lui faire plaisir 💛| Voir +</p>
 </div>
@@ -29,41 +29,6 @@
 </nav>
 
 
-        
-        <section  class="section-collection">
-            {% for member in members %}
-            <div class="collection">
-                <picture>
-                    <img src="https://cdn2.chrzz.com/contents/assets/web_image-phmlg866esu4h1eekbqtaq3khbv0-1x-1.jpg" alt="">
-                </picture>
-                <div>
-                    <h3>
-                        {{ member.name }}
-                    </h3>
-                    <a href="{% url 'app:detail' id=member.id %}"><i id="arrow" class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            {% endfor %}
-            
-        
-        </section>
-
-        <h3>Affichage de la liste</h3>
-
-        <a href="{% url 'app:add' %}" class="btn btn-primary btn-sm">ajouter à</a>
-    
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nom complet</th>
-                    <th>E-Mail</th>
-                    <th>âge</th>
-                    <th>opération</th>
-                </tr>
-            </thead>
-        </table>   
-<!--Mettez la page ici-->
 
 {% endblock content %}
 
