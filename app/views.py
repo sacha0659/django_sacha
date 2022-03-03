@@ -4,7 +4,7 @@ from django.http import HttpResponse,response,Http404,HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Member, Product
 from django.utils import timezone
-from app.forms import MemberForm
+from app.forms import MemberForm,ProductForm
 
 # def index(request):
 #     Question = Question.objects.all().order_by('id')
@@ -41,13 +41,13 @@ def edit(request, id=None):
 	#Au POST (lorsque le bouton d'enregistrement est enfoncé, que ce soit nouveau ou modifier)
 	if request.method == 'POST':
 		#Générer un formulaire
-		form = MemberForm(request.POST, instance=member)
+		form = ProductForm(request.POST, instance=product)
 		if form.is_valid(): #Enregistrer si la validation est OK
-			member = form.save(commit=False)
-			member.save()
+			product = form.save(commit=False)
+			product.save()
 			return redirect('app:index')
 	else: #Au moment de GET (générer un formulaire)
-		form = MemberForm(instance=member)
+		form = ProductForm(instance=product)
 	
 	#Afficher un nouvel écran / modifier l'écran
 	return render(request, 'app/edit.html', dict(form=form, id=id))
