@@ -27,12 +27,12 @@
         <img src="https://cdn2.chrzz.com/contents/assets/detail_images-fpdwpko2xlqrvq4d67m2ke3wh676-2x-1.jpg" alt="">
     </picture>
     <article>
-        <h1>{{member.name}}</h1>
-        <h2>{{member.email}}
+        <h1>{{product.name}}</h1>
+        <h2>{{product.prix}}
             </h2>
-        <p>Dimanche 30 mai, ce sera la fête des Mères (si vous ne le saviez pas, c'est cadeau) et à cette occasion, on a revisité 2 de vos cadres photo préférés, à offrir comme cadeau photo personnalisé à votre maman le jour J. Une édition limitée pleine d'amour et de petits mots doux. 
+        <p>{{product.description}}
         </p>
-        <a class="button button-action" href="">Acheter</a>
+        <a class="button button-action" href="">{{product.stock}}</a>
     </article>
 </section>
     <a href="{% url 'app:index' %}" class="btn btn-default btn-sm">Revenir</a>

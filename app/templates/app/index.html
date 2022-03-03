@@ -31,16 +31,17 @@
 
         
         <section  class="section-collection">
-            {% for member in members %}
+            {% for product in products %}
             <div class="collection">
                 <picture>
-                    <img src="https://cdn2.chrzz.com/contents/assets/web_image-phmlg866esu4h1eekbqtaq3khbv0-1x-1.jpg" alt="">
+                    <img src="{{ product.image }}" alt="">
                 </picture>
                 <div>
                     <h3>
-                        {{ member.name }}
+                        {{ product.name }}
                     </h3>
-                    <a href="{% url 'app:detail' id=member.id %}"><i id="arrow" class="fas fa-arrow-right"></i></a>
+                    <h4>{{product.prix}}</h4>
+                    <a href="{% url 'app:detail' id=product.id %}"><i id="arrow" class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             {% endfor %}
