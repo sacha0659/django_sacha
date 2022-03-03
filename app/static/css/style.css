@@ -585,12 +585,18 @@ i{
     gap: 30px;
     justify-content: center;
   }
+
+  .section-collection a {
+    
+    color: #0053cc;
+  }
+
   .section-collection .collection {
     display: flex;
     flex-direction: column;
     border-radius: 25px;
     width: 230px;
-    background-color: #fff9f1;
+    background-color: rgb(235, 243, 255);
     transition-duration: 0.4s;
   }
   .section-collection .collection picture img {
