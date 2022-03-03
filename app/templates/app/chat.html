@@ -6,10 +6,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 {% block content %}
-<div class="chatter"> <i class="fas fa-comment"></i> </div>
-<div class="navup">
-    <p>Le 6 mars c'est la fête des mamies ! Pensez à une petite carte cadeau pour lui faire plaisir 💛| Voir +</p>
-</div>
+
 <nav>
     <div>
         <a href="{% url 'app:index' %}">
@@ -17,17 +14,31 @@
         </a>
     </div>
     <ul >
-        <li >Albums photo</li>
-        <li >Cadre photo</li>
-        <li>Calendrier photo</li>
-        <li>Box photo </li>
-        <li>Fête des mères </li> 
        
     </ul>
     <a href="">mon compte</a>
 
 </nav>
 
+<div class="message">
+    <div id="screen">
+        <div id="header">CHATBOT</div>
+        <div id="messageDisplaySection">
+            <!-- bot messages -->
+            <!-- <div class="chat botMessages">Bonjour, comment puis-je vous aider ?</div> -->
+
+            <!-- usersMessages -->
+            <!-- <div id="messagesContainer">
+            <div class="chat usersMessages">J’ai besoin de votre aide pour construire un site web.</div>
+        </div> -->
+    </div>
+        <!-- messages input field -->
+        <div id="userInput">
+            <input type="text" name="messages" id="messages" autocomplete="OFF" placeholder="Entrer votre message ici." required>
+            <input type="submit" value="Envoi" id="send" name="send">
+        </div>
+    </div>
+</div>
 
 
 {% endblock content %}

@@ -46,6 +46,7 @@ i{
     text-align: center;
     border-radius: 25px;
     padding-bottom: 15px;
+    box-shadow: 3px 3px 15px rgba(0,0,0,0.2);
 }
 .chatter i{
     font-size: 5em !important;
@@ -53,6 +54,97 @@ i{
 
 .form-group{
     margin-top: 10px;
+}
+
+#userInput
+{
+    height: 50px;
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    bottom: 3%;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+.message{
+    background:rgb(235, 243, 255);
+    position: relative;
+    margin: 30px auto 0px auto;
+    border-radius: 25px;
+    width: 370px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+#screen
+{
+    height: 80%;
+    max-height: 600px;
+    width: 400px;
+    border-radius: 30px;
+    background: #f6f6f6;
+    border-radius: 25px;
+    border: 15px solid #fff;
+    box-shadow: 3px 3px 15px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+#header
+{
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #e50050;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000000a1;
+}
+
+#messageDisplaySection
+{
+    height: 450px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    padding: 0 20px;
+    overflow-y: auto;
+}
+#messages
+{
+    height: 50px;
+    width: 90%;
+    position: absolute;
+    left: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0px 15px;
+    font-size: 17px;
+}
+
+#send
+{
+    height: 50px;
+    width: 24%;
+    position: absolute;
+    right: 0;
+    border: none;
+    outline: none;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-size: 20px;
+    background: #e50050;
+    cursor: pointer;
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -607,7 +699,7 @@ i{
   }
   
   .section-collection {
-      margin-top: 50px;
+    margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(auto-fit, 230px);
     grid-template-rows: repeat(auto-fit, 1fr);
@@ -629,6 +721,7 @@ i{
     width: 230px;
     background-color: rgb(235, 243, 255);
     transition-duration: 0.4s;
+    box-shadow: 3px 3px 15px rgba(0,0,0,0.2);
   }
   .section-collection .collection picture img {
     width: 100%;
