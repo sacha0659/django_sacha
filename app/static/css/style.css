@@ -4,30 +4,59 @@
     background-color: black;
 }
 
+.btn-sm{
+    position: fixed;
+    bottom: 30px;
+    left:30px;
+}
+
+label{
+    font-family: 'Poppins', sans-serif !important;
+}
 .navup{
     background-color: rgb(250, 67, 100);
   }
 .navup p{
     padding:5px 0px;text-align:center; color: white;
 }
-i{
-    font-size: 16px;
+
+a i{
+    font-size: 2em;
 }
 
+p{
+    padding: 0px 20px;
+}
 .page-header{
-    margin-left: 20px;
+    font-family: 'Poppins', sans-serif !important;
+    margin: 0 auto;
+    padding: 20px 0px;
+    width: 80%;
 }
 
 .form-horizontal {
     padding: 5px;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.form-horizontal input{
+    height: 40px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    border-style: none;
 }
 .form{
-    width: 66%;
-    margin: 0 auto;
+    width: 60%;
+    margin: 30px auto 0px auto;
     background-color: #e9f9ff;
     border-radius: 25px;
+    
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
 }
 .chatter{
     color: rgb(250, 67, 100);
@@ -50,6 +79,7 @@ i{
 }
 .chatter i{
     font-size: 5em !important;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.1);
 }
 
 .form-group{
@@ -336,6 +366,10 @@ i{
   [type=button],
   [type=reset],
   [type=submit] {
+    background-color: #e50050;
+    border: none;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
     -webkit-appearance: button;
   }
   
@@ -519,10 +553,7 @@ i{
   /**
    * Basic typography style for copy text
    */
-  body {
-    font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  }
-  
+ 
   /**
    * Clear inner floats
    */
@@ -780,15 +811,25 @@ i{
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
   .section-product picture img {
-    width: 100%;
+    width: 80%;
+    margin-left: 20px;
     border-radius: 25px;
+    
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
   }
   .section-product article {
-    padding: 15px;
+    margin: 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color:  rgb(235, 243, 255);
+    border-radius: 25px;
+    
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
   }
   
+  .col-sm-offset-2 {
+    margin-left: 0px !important;
+  }
   /*# sourceMappingURL=style.css.map */
   
