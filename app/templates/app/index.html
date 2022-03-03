@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 {% block content %}
-<div class="chatter"> <a href="{% url 'app:chat' %}"><i class="fas fa-comment"></i> </a></div>
+<div class="chatter"> <a href="{% url 'app:chat' %}"> <i class="far fa-comment"></i></a></div>
 <div class="navup">
     <p>Le 6 mars c'est la fête des mamies ! Pensez à une petite carte cadeau pour lui faire plaisir 💛| Voir +</p>
 </div>
@@ -47,22 +47,10 @@
             
         
         </section>
-
-        <h3>Affichage de la liste</h3>
-
-        <a href="{% url 'app:add' %}" class="btn btn-primary btn-sm">ajouter à</a>
-    
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nom complet</th>
-                    <th>E-Mail</th>
-                    <th>âge</th>
-                    <th>opération</th>
-                </tr>
-            </thead>
-        </table>   
+        <div class="add">
+            <h3>Ajouter un produit</h3>
+            <a href="{% url 'app:add' %}" class="btn btn-primary btn-sm"><i id="arrow" class="fas fa-arrow-right"></i></a>
+        </div>
 <!--Mettez la page ici-->
 
 {% endblock content %}

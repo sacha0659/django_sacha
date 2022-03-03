@@ -1,10 +1,13 @@
 {% load static %}
-
 <link rel="stylesheet"  href="{%  static  'css/style.css'  %}">
-
-{% block title %}Détails du membre{% endblock title %}
-
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet"  href="{%  static  'css/style.css'  %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 {% block content %}
+<div class="chatter"> <a href="{% url 'app:chat' %}"> <i class="fas fa-comment"></i></a></div>
+
 <nav>
     <div>
         <a href="{% url 'app:index' %}">
@@ -12,11 +15,7 @@
         </a>
     </div>
     <ul >
-        <li >Albums photo</li>
-        <li >Cadre photo</li>
-        <li>Calendrier photo</li>
-        <li>Box photo </li>
-        <li>Fête des mères </li>
+        
        
     </ul>
     <a href="">mon compte</a>
@@ -28,12 +27,13 @@
     </picture>
     <article>
         <h1>{{product.name}}</h1>
-        <h2>{{product.prix}}
-            </h2>
-        <p>{{product.description}}
-        </p>
+        
+        <p>{{product.description}} </p>
+        <h2>{{product.prix}}</h2>
+        <label> </label>
         <a class="button button-action" href="">{{product.stock}}</a>
     </article>
 </section>
-    <a href="{% url 'app:index' %}" class="btn btn-default btn-sm">Revenir</a>
 {% endblock content %}
+
+<script src="https://kit.fontawesome.com/811878f6ff.js" crossorigin="anonymous"></script>
