@@ -14,7 +14,17 @@ i{
     font-size: 16px;
 }
 
+.chatter{
+    color: rgb(250, 67, 100);
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+}
 
+.chatter i{
+    font-size: 5em !important;
+}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
