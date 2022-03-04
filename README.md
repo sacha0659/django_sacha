@@ -1,6 +1,6 @@
 # Shop Django
 
-##Ahmed Jibril ait ouaret , Sacha Galeuzzi 
+## Ahmed Jibril ait ouaret , Sacha Galeuzzi 
 
 ## Setup le projet :
 
