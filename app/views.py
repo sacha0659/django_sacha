@@ -77,6 +77,6 @@ def delete(request, id):
 	member.delete()
 	return redirect('app:index')
 
-def chat(request, id=None):
+def chat(request):
     #member = get_object_or_404(Member, pk=id)
     return render(request, 'app/chat.html')

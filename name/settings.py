@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
     'app.apps.AppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,6 +41,16 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
 ]
+
+ASGI_APPLICATION = 'app.asgi.application'
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer',
+    }
+}
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
