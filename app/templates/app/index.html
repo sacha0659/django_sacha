@@ -32,6 +32,8 @@
         
         <section  class="section-collection">
             {% for product in products %}
+            {% if product.stock > 0 %}
+          
             <div class="collection">
                 <picture>
                     <img src="{{ product.image }}" alt="">
@@ -43,6 +45,8 @@
                     <a href="{% url 'app:detail' id=product.id %}"><i id="arrow" class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
+            {% endif %}
+
             {% endfor %}
             
         
