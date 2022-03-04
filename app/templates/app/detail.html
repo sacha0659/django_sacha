@@ -29,9 +29,15 @@
         <h1>{{product.name}}</h1>
         
         <p>{{product.description}} </p>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Submit">
+         </form>
+        
         <h2>{{product.prix}}</h2>
         <label> </label>
-        <a class="button button-action" href="">{{product.stock}}</a>
+        <a class="button button-action" href="#">{{product.stock}}</a>
     </article>
 </section>
 
