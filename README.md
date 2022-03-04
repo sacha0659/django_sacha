@@ -1,5 +1,7 @@
 # Shop Django
 
+##Ahmed jibril ait ouaret , Sacha Galeuzzi 
+
 ## Setup le projet :
 
 ```
