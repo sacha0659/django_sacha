@@ -59,8 +59,9 @@ def edit(request, id=None):
 def detail(request, id):
     product = get_object_or_404(Product, pk=id)
     print(product.stock)
-    form = ProductUpdateForm(request.POST, instance=product)
+    form = ProductUpdateForm(instance=product)
     if request.method == 'POST':
+        form = ProductUpdateForm(request.POST, instance=product)
         if form.is_valid(): #Enregistrer si la validation est OK
             form.save()
             print(form)
